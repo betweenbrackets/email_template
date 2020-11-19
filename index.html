@@ -1,0 +1,133 @@
+<!-- This fantastic tutorial-->
+<!-- https://webdesign.tutsplus.com/articles/build-an-html-email-template-from-scratch--webdesign-12770 -->
+
+<!-- BEGIN YOUR HTML EMAIL DOCUMENT -->
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Demystifying Email Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- Then we’ll add in some CSS into the <head> of our email, to prevent the unsubscribe link appearing blue on Apple devices. -->
+    <style type="text/css">
+        a[x-apple-data-detectors] {color: inherit !important;}
+    </style>
+</head>
+<!-- CREATE THE BODY AND MAIN TABLE -->
+<body>
+    <body style="margin: 0; padding: 0;">
+        <table role="presentation" border="1" cellpadding="0" cellspacing="0" width="600" style = "border-collapse; collapse;">
+<!-- ROW 1 -->
+<!-- CREATE THE HTML EMAIL TEMPLATE STRUCTURE AND HEADER -->
+            <tr>
+                <td align="center" bgcolor="#70bbd9" style="padding: 40px 0 30px 0;">
+                    <img src="https://assets.codepen.io/210284/h1_1.gif" alt="Creating Email Magic." width="300" height="230" style="display: block;" />
+            </tr>
+<!-- ROW 2 -->
+<!-- CREATE THE CONTENT AREA -->
+            <tr>
+
+                <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+<!-- ADD A TABLE WITH THREE ROWS FOR MAIN CONTENT: HEADLINE, INTRO TEXT, AND A ROW WITH TWO COLUMNS-->
+<!-- USE PERCENTAGE TO BE RESPONSIVE -->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+                        <tr>
+                            <td style="color: #153643; font-family: Arial, sans-serif;">
+                                <h1 style="font-size: 24px; margin: 0;">Wynken, Blynken, and Nod!</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px;"
+                            >
+                                <p style="margin: 0;">one night Sailed off in a wooden shoe,—Sailed on a river of crystal light Into a sea of dew. "Where are you going, and what do you wish?" The old moon asked the three. "We have come to fish for the herring-fish That live in this beautiful sea; Nets of silver and gold have we," Said Wynken, Blynken, And Nod.</p>
+                            </td>
+                        </tr>
+<!-- Now we’re going to add our two columns of content. Because we want a ‘margin’ in between these two cells, but margin isn’t supported, we’ll create a three-column table with an empty cell between the two outer columns. -->
+                        <tr>
+                            <td style="color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px;"
+                            >
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%"  style="border-collapse: collapse;">
+                                    <tr>
+                                        <td width="260" valign="top">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://assets.codepen.io/210284/left_1.gif" alt="" width="100%" height="140" style="display: block;" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 25px 0 0 0;">
+                                                        <p style="margin: 0;">The old moon laughed and sang a song, As they rocked in the wooden shoe; And the wind that sped them all night long Ruffled the waves of dew; The little stars were the herring-fish That lived in the beautiful sea. "Now cast your nets wherever you wish,— Never afraid are we!" So cried the stars to the fishermen three, Wynken,Blynken, And Nod.</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+                                        <td width="260" valign="top">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://assets.codepen.io/210284/right_1.gif" alt="" width="100%" height="140" style="display: block;" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 25px 0 0 0;">
+                                                        <p style="margin: 0;">All night long their nets they threw To the stars in the twinkling foam,— Then down from the skies came the wooden shoe,Bringing the fishermen home: 'Twas all so pretty a sail, it seemed As if it could not be; And some folk thought 'twas a dream they'd dreamed Of sailing that beautiful sea; But I shall name you the fishermen three: Wynken, Blynken, And Nod. (Eugene Field)</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+<!-- ROW 3 -->
+<!-- STYLE THE EMAIL TEMPLATE FOOTER -->
+            <tr>
+                <td bgcolor = "#eef4c50" style = "padding: 30px 30px;">
+<!-- Inside that cell, we’ll nest another table to get our two columns. -->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+                        <tr>
+                            <td>
+                                <td width="75%" style="color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;">
+                                    <p style="margin: 0;">&reg; Someone, somewhere 2025<br/><a href="#" style="color: #ffffff;">Unsubscribe</a> to this newsletter instantly.</p>
+                                </td>
+                            </td>
+<!-- We’ll create another little table for our social media icons. -->
+                            <td align = "right">
+                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.twitter.com/">
+                                                <img src="https://assets.codepen.io/210284/tw.gif" alt="Twitter." width="38" height="38" style="display: block;" border="0" />
+                                            </a>
+                                        </td>
+                                        <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+                                        <td>
+                                            <a href="http://www.twitter.com/">
+                                                <img src="https://assets.codepen.io/210284/fb.gif" alt="Facebook." width="38" height="38" style="display: block;" border="0" />
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</body>
+</html>
+
+<!-- NOTES
+ADDING EMPTY CELLS TO CREATE SPACE/PADDING IF SEND PLATFORM STRIPPING OUT CSS
+<tr><td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td></tr>
+IMAGES ARE BLOCKED BY DEFAULT ON MOST EMAIL CLIENTS
+<td align="center" bgcolor="#70bbd9" style="padding: 40px 0 30px 0;">
+    <img src="images/h1.gif" alt="Creating Email Magic." width="300" height="230" style="display: block;" />
+</td> -->
+
